@@ -73,7 +73,7 @@ const ListRecord = () => {
                                  >
                                     <i className='fas fa-trash-alt' />
                                  </button>
-                                 <Link to={`/view/${id}`}>
+                                 <Link to={`/view/${data[id].id}`}>
                                     <button className='btn text-info'>
                                        <i className='fas fa-eye' />
                                     </button>

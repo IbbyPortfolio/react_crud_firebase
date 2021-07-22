@@ -18,7 +18,6 @@ const AddEdit = () => {
    console.log('data:', data);
 
    const { id } = useParams();
-   // const { id } = currentId;
 
    useEffect(() => {
       db.collection('contacts')
