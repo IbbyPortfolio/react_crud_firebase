@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { Route, Switch } from 'react-router-dom';
+import AddEdit from './components/AddEdit';
+import ListRecord from './components';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <div className='App'>
+         <Header />
+         <Switch>
+            <Route exact path='/' component={ListRecord} />
+            <Route exact path='/add' component={AddEdit} />
+            <Route exact path='/update/:id' component={AddEdit} />
+         </Switch>
+      </div>
+   );
 }
 
 export default App;
