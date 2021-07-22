@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { db } from '../firebase';
+import { getContacts } from '../redux/actions';
 
 const ListRecord = () => {
    const [data, setData] = useState('');
+
+   // const { contacts: data } = useSelector((state) => state.contact);
+   // console.log('State:', data);
+
+   // const dispatch = useDispatch();
+
+   // useEffect(() => {
+   //    dispatch(getContacts);
+   // }, []);
 
    useEffect(() => {
       db.collection('contacts').onSnapshot((snapshot) => {
