@@ -4,14 +4,18 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
    return (
       <div className='container-fluid'>
-         <nav className=''>
-            <NavLink to='/' className='btn'>
+         <nav
+            className='navbar navbar-expand-lg'
+            style={{ backgroundColor: 'rgb(120, 120, 120)' }}
+         >
+            <NavLink to='/' className='btn' style={{ color: 'white' }}>
                Home
             </NavLink>
-            <NavLink to='/add' className='btn'>
+
+            <NavLink to='/add' className='btn' style={{ color: 'white' }}>
                Add
             </NavLink>
-            <NavLink to='/about' className='btn'>
+            <NavLink to='/about' className='btn' style={{ color: 'white' }}>
                About
             </NavLink>
          </nav>

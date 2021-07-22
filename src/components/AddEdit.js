@@ -64,48 +64,54 @@ const AddEdit = () => {
    };
 
    return (
-      <div>
+      <div className='container mt-5'>
          <div className='row'>
             <div className='col-md-6'>
                <form onSubmit={handleSubmit}>
-                  <div>
-                     <label>Name</label>
+                  <div className='form-group'>
+                     <label className='bmd-label-floating'>Name</label>
                      <input
                         type='text'
+                        className='form-control'
                         value={name}
                         name='name'
                         onChange={handleInputChange}
                      />
                   </div>
-                  <div>
-                     <label>Mobile</label>
+                  <div className='form-group'>
+                     <label className='bmd-label-floating'>Mobile</label>
                      <input
                         type='text'
+                        className='form-control'
                         value={mobile}
                         name='mobile'
                         onChange={handleInputChange}
                      />
                   </div>
-                  <div>
-                     <label>Email</label>
+                  <div className='form-group'>
+                     <label className='bmd-label-floating'>Email</label>
                      <input
                         type='text'
+                        className='form-control'
                         value={email}
                         name='email'
                         onChange={handleInputChange}
                      />
                   </div>
-                  <div>
-                     <label>Address</label>
+                  <div className='form-group'>
+                     <label className='bmd-label-floating'>Address</label>
                      <input
                         type='text'
+                        className='form-control'
                         value={address}
                         name='address'
                         onChange={handleInputChange}
                      />
                   </div>
-                  <button>Cancel</button>
-                  <button className='btn btn-success btn-raised'>Submit</button>
+                  <button className='btn btn-default'>Cancel</button>
+                  <button type='submit' className='btn btn-success btn-raised'>
+                     Submit
+                  </button>
                </form>
             </div>
          </div>
